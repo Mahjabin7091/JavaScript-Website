@@ -1,0 +1,447 @@
+<html>
+    <head>
+        <title>Qiuz</title>
+        <script type="text/javascript">
+        var score=0;
+        var scoreQuestion = [0,0,0,0,0];  // check number of question's correct
+
+                function Question_1 ()  //the first question is a true/false question
+                {          
+                    var true_false = confirm("Is 10 equal to 10 ?"); 
+             
+                    if (true_false == true)
+                    {
+ 
+                        if(scoreQuestion[0] == -1)  // touched and Negetive answer
+                            {
+                                var res = document.getElementById("demo").innerHTML.replace("InCorrect".fontcolor('Red'), "Correct".fontcolor('Green'));
+                                document.getElementById("demo").innerHTML =res;
+                                score++;
+                                scoreQuestion[0]=1;
+                                document.getElementById("result").innerHTML = score;
+                            }
+                        if(scoreQuestion[0] == 0) // Untouched
+                        {
+                            document.getElementById("demo").innerHTML +=  ("Correct".fontcolor('Green')); 
+                            scoreQuestion[0]=1;
+                            score++;
+                        }
+                        if(scoreQuestion[0] == 1)   // touched and correct answer
+                        {
+
+                        }
+
+                    }
+                        
+                    else
+                    {
+                        
+                        if(scoreQuestion[0] == 1)  // touched and pisitive answer
+                            {
+                                var res = document.getElementById("demo").innerHTML.replace("Correct".fontcolor('Green'), "InCorrect".fontcolor('Red'));
+                                document.getElementById("demo").innerHTML =res;
+                                score--;
+                                scoreQuestion[0]=-1;
+                                document.getElementById("result").innerHTML = score;
+                            }
+                        if(scoreQuestion[0] == 0) // Untouched
+                        {
+                            document.getElementById("demo").innerHTML +=  ("InCorrect".fontcolor('Red')); 
+                            scoreQuestion[0]=-1;
+                            score--;
+                        }
+                        if(scoreQuestion[0] == -1)   // touched and negetive answer
+                        {
+                          // No coding rigth now.
+
+                        }
+
+                    }
+
+                    document.getElementById("result").innerHTML = ("Your Score is : " + score) ;
+
+                }
+                function Question_2 ()   //Second one is a numeric answer question
+                {
+
+                    var number = prompt ("What is the result of the following expression: 10+20?");
+                 
+
+                    if(number==30)
+                    {
+                        if(scoreQuestion[1] == -1)  // touched and Negetive answer
+                            {
+                                var res = document.getElementById("demo1").innerHTML.replace("InCorrect".fontcolor('Red'), "Correct".fontcolor('Green'));
+                                document.getElementById("demo1").innerHTML =res;
+                                score++;
+                                scoreQuestion[1]=1;
+                                document.getElementById("result").innerHTML = score;
+                            }
+                        if(scoreQuestion[1] == 0) // Untouched
+                        {
+                            document.getElementById("demo1").innerHTML +=  ("Correct".fontcolor('Green')); 
+                            scoreQuestion[1]=1;
+                            score++;
+                        }
+                        if(scoreQuestion[1] == 1)   // touched and correct answer
+                        {
+
+                        }
+
+                    }
+
+                    else if (number == "Thirty" || number == "NaN")
+                    {
+                        prompt("You have not entered a numeric value! Please Try again. What is the result of the following expression: 10+20? ");
+
+                        if(scoreQuestion[1] == 1)  // touched and pisitive answer
+                            {
+                                var res = document.getElementById("demo1").innerHTML.replace("Correct".fontcolor('Green'), "InCorrect".fontcolor('Red'));
+                                document.getElementById("demo1").innerHTML =res;
+                                score--;
+                                scoreQuestion[1]=-1;
+                                document.getElementById("result").innerHTML = score;
+                            }
+                        if(scoreQuestion[1] == 0) // Untouched
+                        {
+                            document.getElementById("demo1").innerHTML +=  ("InCorrect".fontcolor('Red')); 
+                            scoreQuestion[1]=-1;
+                            //score--;
+                        }
+                        if(scoreQuestion[1] == -1)   // touched and negetive answer
+                        {
+                          
+
+                        }
+                        
+                    }
+                        
+                    else if( number == "thirty" || number == "NaN")
+                    {
+                        prompt("You have not entered a numeric value! Please Try again. What is the result of the following expression: 10+20? ");
+
+                        if(scoreQuestion[1] == 1)  // touched and pisitive answer
+                            {
+                                var res = document.getElementById("demo1").innerHTML.replace("Correct".fontcolor('Green'), "InCorrect".fontcolor('Red'));
+                                document.getElementById("demo1").innerHTML =res;
+                                score--;
+                                scoreQuestion[1]=-1;
+                                document.getElementById("result").innerHTML = score;
+                            }
+                        if(scoreQuestion[1] == 0) // Untouched
+                        {
+                            document.getElementById("demo1").innerHTML +=  ("InCorrect".fontcolor('Red')); 
+                            scoreQuestion[1]=-1;
+                            //score--;
+                        }
+                        if(scoreQuestion[1] == -1)   // touched and negetive answer
+                        {
+                          
+
+                        }
+                        
+                    }
+                    else if (number != 30)
+                    {
+            
+                        if(scoreQuestion[1] == 1)  // touched and pisitive answer
+                            {
+                                var res = document.getElementById("demo1").innerHTML.replace("Correct".fontcolor('Green'), "InCorrect".fontcolor('Red'));
+                                document.getElementById("demo1").innerHTML =res;
+                                score--;
+                                scoreQuestion[1]=-1;
+                                document.getElementById("result").innerHTML = score;
+                            }
+                        if(scoreQuestion[1] == 0) // Untouched
+                        {
+                            document.getElementById("demo1").innerHTML +=  ("InCorrect".fontcolor('Red')); 
+                            scoreQuestion[1]=-1;
+                            //score--;
+                        }
+                        if(scoreQuestion[1] == -1)   // touched and negetive answer
+                        {
+                          
+
+                        }
+                       
+                    }
+                    
+                    else
+                    {
+                    
+                        if(scoreQuestion[1] == 1)  // touched and pisitive answer
+                            {
+                                var res = document.getElementById("demo1").innerHTML.replace("Correct".fontcolor('Green'), "InCorrect".fontcolor('Red'));
+                                document.getElementById("demo1").innerHTML =res;
+                                score--;
+                                scoreQuestion[1]=-1;
+                                document.getElementById("result").innerHTML = score;
+                            }
+                        if(scoreQuestion[1] == 0) // Untouched
+                        {
+                            document.getElementById("demo1").innerHTML +=  ("InCorrect".fontcolor('Red')); 
+                            scoreQuestion[1]=-1;
+                            //score--;
+                        }
+                        if(scoreQuestion[1] == -1)   // touched and negetive answer
+                        {
+                          
+
+                        }
+
+                    }
+                    document.getElementById("result").innerHTML = ("Your Score is : " + score);
+                }
+            
+                
+                function Question_3 ()   // third one is a word answer  question
+                {
+                    var word = prompt ("How many do we have assignment for JavaScript Class? (Help: five)");
+                 
+                    if (word == "five")
+                    {
+                       
+                        if(scoreQuestion[2] == -1)  // touched and Negetive answer
+                            {
+                                var res = document.getElementById("demo2").innerHTML.replace("InCorrect".fontcolor('Red'), "Correct".fontcolor('Green'));
+                                document.getElementById("demo2").innerHTML =res;
+                                score++;
+                                scoreQuestion[2]=1;
+                                document.getElementById("result").innerHTML = score;
+                            }
+                        if(scoreQuestion[2] == 0) // Untouched
+                        {
+                            document.getElementById("demo2").innerHTML +=  ("Correct".fontcolor('Green')); 
+                            scoreQuestion[2]=1;
+                            score++;
+                        }
+                        if(scoreQuestion[2] == 1)   // touched and correct answer
+                        {
+
+                        }
+
+                    }
+                
+                    else
+                    {
+          
+                        if(scoreQuestion[2] == 1)  // touched and pisitive answer
+                            {
+                                var res = document.getElementById("demo2").innerHTML.replace("Correct".fontcolor('Green'), "InCorrect".fontcolor('Red'));
+                                document.getElementById("demo2").innerHTML =res;
+                                score--;
+                                scoreQuestion[2]=-1;
+                                document.getElementById("result").innerHTML = score;
+                            }
+                        if(scoreQuestion[2] == 0) // Untouched
+                        {
+                            document.getElementById("demo2").innerHTML +=  ("InCorrect".fontcolor('Red')); 
+                            scoreQuestion[2]=-1;
+                            //score--;
+                        }
+                        if(scoreQuestion[2] == -1)   // touched and negetive answer
+                        {
+                          
+
+                        }
+                    }
+                    
+                    document.getElementById("result").innerHTML = ("Your Score is : " + score);
+                }
+                function Question_4 ()
+                {
+
+                        var Course = prompt ("How many Courses do you have this semister? (Help: 6)");
+                      
+                        if(Course == "6") // check the user enter number
+                        {
+                            
+                            if(scoreQuestion[3] == -1)  // touched and Negetive answer
+                                {
+                                    var res = document.getElementById("demo3").innerHTML.replace("InCorrect".fontcolor('Red'), "Correct".fontcolor('Green'));
+                                    document.getElementById("demo3").innerHTML =res;
+                                    score++;
+                                    scoreQuestion[3]=1;
+                                    document.getElementById("result").innerHTML = score;
+                                }
+                            if(scoreQuestion[3] == 0) // Untouched
+                            {
+                                document.getElementById("demo3").innerHTML +=  ("Correct".fontcolor('Green')); 
+                                scoreQuestion[3]=1;
+                                score++;
+                            }
+                            if(scoreQuestion[3] == 1)   // touched and correct answer
+                            {
+
+                            }
+
+                        }
+                        else if (Course == "six" || Course == "NaN")
+                        {
+                            alert("You have not entered a numeric value! Please Try again. How many Courses do you have this semister? (Help: 6) ");
+
+                            if(scoreQuestion[3] == 1)  // touched and pisitive answer
+                            {
+                                var res = document.getElementById("demo3").innerHTML.replace("Correct".fontcolor('Green'), "InCorrect".fontcolor('Red'));
+                                document.getElementById("demo3").innerHTML =res;
+                                score--;
+                                scoreQuestion[3]=-1;
+                                document.getElementById("result").innerHTML = score;
+                            }
+                            if(scoreQuestion[3] == 0) // Untouched
+                            {
+                                document.getElementById("demo3").innerHTML +=  ("InCorrect".fontcolor('Red')); 
+                                scoreQuestion[3]=-1;
+                                //score--;
+                            }
+                            if(scoreQuestion[3] == -1)   // touched and negetive answer
+                            {
+                            
+
+                            }
+
+                        }
+                    
+                        else if( Course == "Six" || Course == "NaN")
+                        {
+                            alert("You have not entered a numeric value! Please Try again. How many Courses do you have this semister? (Help: 6)");
+
+                            if(scoreQuestion[3] == 1)  // touched and pisitive answer
+                            {
+                                var res = document.getElementById("demo3").innerHTML.replace("Correct".fontcolor('Green'), "InCorrect".fontcolor('Red'));
+                                document.getElementById("demo3").innerHTML =res;
+                                score--;
+                                scoreQuestion[3]=-1;
+                                document.getElementById("result").innerHTML = score;
+                            }
+                            if(scoreQuestion[3] == 0) // Untouched
+                            {
+                                document.getElementById("demo3").innerHTML +=  ("InCorrect".fontcolor('Red')); 
+                                scoreQuestion[3]=-1;
+                                score--;
+                            }
+                            if(scoreQuestion[3] == -1)   // touched and negetive answer
+                            {
+                            
+
+                            }
+            
+                        }
+                        else  
+                        {
+                            
+                            
+                            if(scoreQuestion[3] == 1)  // touched and pisitive answer
+                            {
+                                var res = document.getElementById("demo3").innerHTML.replace("Correct".fontcolor('Green'), "InCorrect".fontcolor('Red'));
+                                document.getElementById("demo3").innerHTML =res;
+                                score--;
+                                scoreQuestion[3]=-1;
+                                document.getElementById("result").innerHTML = score;
+                            }
+                            if(scoreQuestion[3] == 0) // Untouched
+                            {
+                                document.getElementById("demo3").innerHTML +=  ("InCorrect".fontcolor('Red')); 
+                                scoreQuestion[3]=-1;
+                                //score--;
+                            }
+                            if(scoreQuestion[3] == -1)   // touched and negetive answer
+                            {
+                            
+
+                            }
+    
+                        } 
+                    
+                    document.getElementById("result").innerHTML = ("Your Score is : " + score);
+                }
+                function Question_5 ()
+                {
+                    var Course = prompt ("How many Courses do you pass to get Co-op opportunity? (Help: 25)");
+                    var Course_int = parseInt(Course);
+
+                    if(Course_int == 25) // check the user enter number
+                    {
+
+                        if(scoreQuestion[4] == -1)  // touched and Negetive answer
+                                {
+                                    var res = document.getElementById("demo4").innerHTML.replace("InCorrect".fontcolor('Red'), "Correct".fontcolor('Green'));
+                                    document.getElementById("demo4").innerHTML =res;
+                                    score++;
+                                    scoreQuestion[4]=1;
+                                    document.getElementById("result").innerHTML = score;
+                                }
+                            if(scoreQuestion[4] == 0) // Untouched
+                            {
+                                document.getElementById("demo4").innerHTML +=  ("Correct".fontcolor('Green')); 
+                                scoreQuestion[4]=1;
+                                score++;
+                            }
+                            if(scoreQuestion[4] == 1)   // touched and correct answer
+                            {
+
+                            }
+
+                    }
+                    else  
+                    {
+                      if(scoreQuestion[4] == 1)  // touched and pisitive answer
+                            {
+                                var res = document.getElementById("demo4").innerHTML.replace("Correct".fontcolor('Green'), "InCorrect".fontcolor('Red'));
+                                document.getElementById("demo4").innerHTML =res;
+                                score--;
+                                scoreQuestion[4]=-1;
+                                document.getElementById("result").innerHTML = score;
+                            }
+                            if(scoreQuestion[4] == 0) // Untouched
+                            {
+                                document.getElementById("demo4").innerHTML +=  ("InCorrect".fontcolor('Red')); 
+                                scoreQuestion[4]=-1;
+                                //score--;
+                            }
+                            if(scoreQuestion[4] == -1)   // touched and negetive answer
+                            {
+                            
+
+                            }
+
+                    }
+                   document.getElementById("result").innerHTML = ("Your Score is : " + score);
+                }
+         
+         
+        </script>
+    </head>
+
+    <body>
+        <h1>Quiz</h1>
+        <img id="theImage" src="qiuz.jpg">       
+         <a id="showImage"></a>
+          
+        <p>There are five questions. You can choose each of them.</p>
+        <p> In Multiple choice question, You can select "OK" for "True" answer and "Cancel" for "False"</p>
+
+        <p id = "demo">
+        <button type="button" value="Correct" onclick="Question_1()"  size="3">Question 1</button>
+        </p>
+        <p id="demo1">
+        <button type="button" value="Correct" onclick="Question_2()" size="3">Question 2</button>
+        </p>
+        <p id="demo2">
+        <button type="button" value="Correct" onclick="Question_3()" size="3">Question 3</button>
+        </p>
+        <p id="demo3">
+        <button type="button" value="Correct" onclick="Question_4()" size="3">Question 4</button>
+        </p>
+        <p id="demo4">
+        <button type="button" value="Correct" onclick="Question_5()" size="3">Question 5</button>
+        </p>
+       
+        <p id="result"></p>
+        <script>
+            <p> The Score is: </p>
+            document.getElementById("result").innerHTML = score;
+        </script>
+
+    </body>
+</html>
